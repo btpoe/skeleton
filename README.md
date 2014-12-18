@@ -9,19 +9,19 @@ A front-end starting point designed to play nice with many different MVC's / CMS
 - app
 - public
 - resources
--- assets
---- components
---- img
---- js
---- sass
----- common
----- modules
----- partials
----- screens
----- vendor
--- views
---- layout
---- partials
+  - assets
+    - components
+    - img
+    - js
+    - sass
+      - common
+      - modules
+      - partials
+      - screens
+      - vendor
+  - views
+    - layout
+    - partials
 - vendor
 
 
