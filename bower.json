@@ -1,0 +1,23 @@
+{
+  "name": "skeleton",
+  "version": "0.1",
+  "authors": [
+    "Brandon Poe <brandon.poe@union.co>"
+  ],
+  "homepage": "https://github.com/btpoe/skeleton",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "resources/assets/components/",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "foundation": "^5.4.7",
+    "foundation-legacy": "https://github.com/zurb/bower-foundation/archive/4-3-stable.zip",
+    "filament-sticky": "^0.1.3",
+    "frame-events": "*",
+    "enquire": "~2.1.2"
+  }
+}

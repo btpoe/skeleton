@@ -1,0 +1,51 @@
+//
+// Screen
+//
+// - Vendor
+// - Common
+// - Modules
+// - Partials
+// - Screens
+// - Helpers
+//
+
+
+//
+// Vendor
+
+@import "vendor/normalize";
+@import "vendor/foundation/settings";
+@import "vendor/foundation";
+@import "vendor/sticky-polyfill";
+
+
+//
+// Common
+
+@import "common/icons";
+
+
+//
+// Modules
+
+//@import "modules/...";
+
+
+//
+// Partials
+
+@import "partials/layout";
+@import "partials/footer";
+@import "partials/header";
+
+
+//
+// Screens
+
+@import "screens/home";
+
+
+//
+// Helpers
+
+@import "common/helpers";

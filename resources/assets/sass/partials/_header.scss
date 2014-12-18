@@ -1,0 +1,45 @@
+//
+// Header
+//
+// - Dependencies
+// - Topbar
+// - Header
+// - Navigation
+//
+
+
+//
+// Dependencies
+
+@import "../global";
+
+
+//
+// Topbar
+
+.site-topbar {
+	max-width: $site-width;
+	margin: auto;
+	padding: 0 20px;
+	background: $secondary-color;
+	box-shadow: -$site-width 0 $secondary-color, $site-width 0 $secondary-color;
+}
+
+//
+// Header
+
+.site-header {
+	max-width: $site-width;
+	margin: auto;
+	padding: 0 20px;
+	background: $primary-color;
+	box-shadow: -$site-width 0 $primary-color, $site-width 0 $primary-color;
+}
+
+
+//
+// Navigation
+
+.site-navigation {
+
+}

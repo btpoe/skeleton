@@ -1,0 +1,46 @@
+//
+// Layout
+//
+// - Dependencies
+// - Layout
+//
+
+
+//
+// Dependencies
+
+@import "../global";
+
+
+//
+// Layout
+
+.page-wrapper {
+	max-width: $site-width * 1.08;
+	margin: auto;
+	padding: 4%;
+}
+
+.page-sidebar, .page-main {
+	position: relative;
+}
+
+@media #{$medium-up} {
+	.page-sidebar {
+		width: 33.333%;
+	}
+
+	.page-main {
+		width: 66.666%;
+	}
+}
+
+@media #{$large-up} {
+	.page-sidebar {
+		width: 25%;
+	}
+
+	.page-main {
+		width: 75%;
+	}
+}

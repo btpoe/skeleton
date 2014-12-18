@@ -1,0 +1,116 @@
+// IMPORT ONCE
+// We use this to prevent styles from being loaded multiple times for components that rely on other components.
+$modules: () !default;
+@mixin exports($name) {
+	$module_index: index($modules, $name);
+	@if (($module_index == null) or ($module_index == false)) {
+		$modules: append($modules, $name);
+		@content;
+	}
+}
+
+@mixin ul-reset() {
+	margin: 0;
+	list-style-type: none;
+}
+
+@mixin inline-list($valign: false) {
+	@include ul-reset;
+
+	> li {
+		display: inline-block;
+
+		@if $valign {
+			vertical-align: $valign;
+		}
+	}
+}
+
+@mixin icon($icon) {
+	content: $icon;
+	font-family: 'icons';
+	font-weight: normal;
+}
+
+
+// @MIXIN
+//
+// We use this mixin to create a css triangle
+//
+// $direction - The corner or side that the point of the triangle with face. Single direction points to a side, two directions points to a corner.
+// $dimensions - Height and width. If single dimension provided, height and width are equal to declared value.
+// $color - Color of the triangle
+
+@mixin triangle($direction: top, $dimensions: 5px, $color: inherit) {
+
+	width: 0;
+	height: 0;
+	border: solid transparent;
+
+	$width: 0;
+	$height: 0;
+
+	@if (type-of($dimensions) == 'list') {
+		$height: nth($dimensions, 1);
+		$width: nth($dimensions, 2);
+	}
+	@else {
+		$width: $dimensions;
+		$height: $dimensions;
+	}
+
+
+	@if ($direction == top) {
+		border-width: 0 ($width/2) $height;
+		border-bottom-color: $color;
+	}
+	@else if ($direction == left) {
+		border-width: ($height/2) $width ($height/2) 0;
+		border-right-color: $color;
+	}
+	@else if ($direction == right) {
+		border-width: ($height/2) 0 ($height/2) $width;
+		border-left-color: $color;
+	}
+	@else if ($direction == bottom) {
+		border-width: $height ($width/2) 0;
+		border-top-color: $color;
+	}
+	@else if ($direction == (top left) or $direction == (left top)) {
+		border-width: $height $width 0 0;
+		border-top-color: $color;
+	}
+	@else if ($direction == (top right) or $direction == (right top)) {
+		border-width: $height 0 0 $width;
+		border-top-color: $color;
+	}
+	@else if ($direction == (bottom left) or $direction == (left bottom)) {
+		border-width: 0 $width $height 0;
+		border-bottom-color: $color;
+	}
+	@else if ($direction == (bottom right) or $direction == (right bottom)) {
+		border-width: 0 0 $height $width;
+		border-bottom-color: $color;
+	}
+}
+
+
+@include exports('ul-reset') {
+
+	%ul-reset {
+		@include ul-reset;
+	}
+	.ul-reset {
+		@extend %ul-reset;
+	}
+}
+
+@include exports('inline-list') {
+
+	%inline-list {
+		@include inline-list(middle);
+	}
+	.inline-list {
+		@extend %inline-list;
+	}
+}

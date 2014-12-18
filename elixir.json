@@ -1,0 +1,6 @@
+{
+	"jsAppDir":               "resources/assets/js",
+	"bowerDir":               "resources/assets/components",
+	"foundationDir":          "resources/assets/components/foundation/js/foundation",
+	"foundationLegacyDir":    "resources/assets/components/foundation-legacy/js/foundation"
+}

@@ -1,0 +1,57 @@
+//
+// Icons
+//
+// - Dependencies
+// - Font Face
+// - Icon Reset
+// - Icons
+//
+
+
+//
+// Dependencies
+
+@import "../global";
+
+
+//
+// Font Face
+
+@font-face {
+	font-family: 'icons';
+	src:url('../fonts/icons.eot?ogo9s2');
+	src:url('../fonts/icons.eot?#iefixogo9s2') format('embedded-opentype'),
+		url('../fonts/icons.woff?ogo9s2') format('woff'),
+		url('../fonts/icons.ttf?ogo9s2') format('truetype'),
+		url('../fonts/icons.svg?ogo9s2#icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+//
+// Icon Reset
+
+.ico {
+	font-family: 'icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+//
+// Icons
+
+// Declare your icons here...
+
+//.ico-icon-name:before {
+//	content: $ico-icon-name;
+//}

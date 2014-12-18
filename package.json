@@ -1,0 +1,10 @@
+{
+	"name": "skeleton",
+	"devDependencies": {
+		"browser-sync": "*",
+		"gulp": "*",
+		"laravel-elixir": "*",
+		"laravel-elixir-browser-sync": "^0.1.2",
+		"laravel-elixir-imagemin": "^0.1.4"
+	}
+}
