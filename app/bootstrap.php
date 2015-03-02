@@ -1,12 +1,28 @@
 <?php
 
-$views = dirname(dirname( __FILE__ )) . '/resources/views';
+require dirname(dirname( __FILE__ )) . '/vendor/autoload.php';
 
-$page = $_GET['q'];
-if ($page == '') $page .= 'home/';
-if (substr($page, -1) == '/') $page .= 'index';
+use Philo\Blade\Blade;
 
-$bodyClass = 'page-' . explode('/', trim($page, '/'))[0] . ' page-' . str_replace('/', '-', trim($page, '/'));
-$page = $views . '/' . $page . '.php';
+class App {
+    public function environment() {
+        return 'local';
+    }
+}
 
-include $views . '/layout/default.php';
+function app() {
+    return new App;
+}
+
+$root = dirname(dirname( __FILE__ ));
+$views = $root . '/resources/views';
+$cache = $root . '/app/tmp/cache';
+
+$page = trim($_SERVER['REQUEST_URI'], '/');
+if ($page == '') $page = 'home';
+if (substr_count($page, '/') == 0) $page .= '/index';
+
+//$bodyClass = 'page-' . explode('/', trim($page, '/'))[0] . ' page-' . str_replace('/', '-', trim($page, '/'));
+
+$blade = new Blade($views, $cache);
+echo $blade->view()->make($page);

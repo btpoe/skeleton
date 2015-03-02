@@ -1,6 +1,5 @@
 {
     "require": {
-        "twig/twig": "~1.0",
-        "philo/laravel-blade": "2.*",
+        "philo/laravel-blade": "2.*"
     }
 }
